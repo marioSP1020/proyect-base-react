@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { getSongs } from '../lib/api';
 
 const Home = () => {
-  const [songs, setSongs] = useState([]); //la respuesta es un array
+  const [songs, setSongs] = useState([]);
 
   const fetchAllsongs = async () => {
-    const songsData = await getSongs('tupac');
+    const songsData = await getSongs('the police');
     setSongs(songsData);
   };
 
@@ -21,7 +21,6 @@ const Home = () => {
         return (
           <article key={song.id}>
             <h3>Song title: {song.title}</h3>
-            <p>{song.name}</p>
           </article>
         );
       })}
