@@ -1,26 +1,55 @@
 import React, { useEffect, useState } from 'react';
 import { getSongs } from '../lib/api';
+import { useHistory } from 'react-router-dom';
 
 const Home = () => {
   const [songs, setSongs] = useState([]);
+  const [searchString, setSearchString] = useState('');
 
-  const fetchAllsongs = async () => {
-    const songsData = await getSongs("the police");
-    setSongs(songsData);
+  const history = useHistory()
+  
+
+
+  const fetchAllsongs = async (artist) => {
+    try {
+    const songsData = await getSongs(artist);
+      setSongs(songsData);
+    } catch {
+      history.push('/error')
+    }
+    
   };
-
- 
-
-
-// element.onclick = functionRef;
 
   useEffect(() => {
     fetchAllsongs();
   }, []);
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    fetchAllsongs(searchString)
+  }
+
+  const handleChange = (event) => {
+    const searchItem = event.currentTarget.value.toLowerCase()
+    setSearchString(searchItem)
+    console.log(searchItem);
+  }
+
+
+
   return (
     <main className="page-home">
       <h2>Soy el Home</h2>
+      <form onSubmit={handleSubmit}>
+            <label className="cambio" for="search"> Search songs</label>
+        <input className="recambio" type="search"
+          id="search"
+          placeholder="artist to search"
+          value={searchString}
+          onChange={handleChange} />
+        <button>submit</button>
+          </form>
+          
 
       {songs.map((song) => {
         return (                    
@@ -28,11 +57,7 @@ const Home = () => {
               <h3> {song.title}</h3>
           </article>
           
-          // <div>
-          //   <label for="search"> Search songs</label>
-          //   <input type="search" id="search" placeholder="songs" />
-          
-          // </div>
+
         );
       })}
     </main>

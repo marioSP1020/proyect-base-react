@@ -17,7 +17,6 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/*" component={ErrorPage} />
-          <Route path="/details" component={Details} />
         </Switch>
         <Footer/>
       </BrowserRouter>
