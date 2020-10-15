@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1> Esto es el Header</h1>;
+      <h1> Decibelios</h1>;
     </header>
       
   )

@@ -1,9 +1,10 @@
 .page {
   flex: 1 auto;
   padding: 0 1.25rem;
+  background-image: url(https://media.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.gif);
 
   &.error {
-    animation: flash 0.2s infinite alternate linear;
+    animation: flash 1s infinite alternate linear;
   }
 }
 
@@ -11,5 +12,6 @@
   to {
     background-color: red;
     color: white;
+    font-size: 50px;
   }
 }
