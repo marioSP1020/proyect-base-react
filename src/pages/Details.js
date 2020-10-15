@@ -1,18 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import { getFavorite } from '../lib/api';
+// import React, { useEffect, useState } from 'react';
+// import { getFavorite } from '../lib/api';
+
+// const Details = () => {
+//   const [detalles, setDetails] = useState([]);
+
+//   const fetchDetails = async () => {
+
+//     const detailsData = await getFavorite('tupac');
+//     setDetails(detailsData);
+//   };
+
+//   useEffect(() => {
+//     fetchDetails();
+//   }, []);
+// return (
+//     <main className="detalles">
+//       <h2>DETALLES</h2>
+
+//       {songs.map((song) => {
+//         return (                    
+//          <article key={song.id}>  
+//               <h3> {song.title}</h3>
+//           </article>
+          
+//           // <div>
+//           //   <label for="search"> Search songs</label>
+//           //   <input type="search" id="search" placeholder="songs" />
+          
+//           // </div>
+//         );
+//       })}
+//     </main>
+//   );
+// };
 
 
 
 
-import React from 'react';
+// }
 
-const Details = () => {
-  return (
-    <main className="page error">
-      <h2>404</h2>
-      <p>Página no encontrada</p>
-    </main>
-  );
-};
 
-export default ErrorPage;
+
+
+// export default Details;

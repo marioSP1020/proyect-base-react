@@ -7,9 +7,8 @@ export const getSongs = async (query) => {
   return data;
   
 };
-
-export const getFavorite = async (query) => {
-  const response = await fetch(`${BASE_URL}?pattern=${query}`);
-  const data = await response.json();
-  return data;
-}
+// export const getSongsAll = async () => { 
+//   const response = await fetch(`${BASE_URL}?pattern=All`);
+//   const data = await response.json();
+//   return data;
+// }
