@@ -1,9 +1,22 @@
 *{
 box-sizing: border-box;
+background-color: rgba(223, 101, 45, 0.507);
 }
 
-article{
+.page-home {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
+  grid-gap: 20px;
+  color: black;
+  font-family: serif;
+}
+h3 {
+  background-color: rgb(182, 134, 134);
+  border-radius: 50px;
+  
+}
+article {
+  background-color:(223, 101, 45, 0.507);
+  
 }

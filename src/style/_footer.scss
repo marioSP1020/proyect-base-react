@@ -1,14 +1,13 @@
 footer {
-  background-color: red;
-  color: black;
-  padding: 1.25rem;
-  background: -moz-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: -ms-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: -o-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: linear-gradient(to right,red,orange,yellow, green, blue,indigo,violet); 
-
+  background-color:black;
+ 
+  padding: 0.75rem;
+  
   p {
     text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
   }
+  
 }
