@@ -3,7 +3,7 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 
 // pages
 import Home from '../pages/Home.js';
-import ErrorPage from '../pages/Error.js';
+import Error from '../pages/Error.js';
 
 // UI components
 import Header from '../components/Header';
@@ -17,7 +17,7 @@ function App() {
         <Header/>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/*" component={ErrorPage} />
+          <Route path="/*" component={Error} />
         </Switch>
         <Article/>
         <Footer/>
