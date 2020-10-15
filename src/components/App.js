@@ -1,54 +1,33 @@
 import React from 'react';
-import Header from '../components/Header.js';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
+//UI componets
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
-class App extends React.Component {
-  state = {
-    song: [],
-  }
 
-//Si necesita cargar datos desde un punto final remoto, este es un buen lugar para instanciar la solicitud de red.
-  async componentDidMount() {
-    const res = await fetch('http://www.songsterr.com/a/ra/songs.json?pattern=Marley');
-    const song = await res.json();
-    console.log(song);
-    this.setState({ song });
-  }
+// pages
+import Home from '../pages/Home.js';
+import ErrorPage from '../pages/Error.js';
 
-  render(){
 
-    return (
-      <div>
-        <p>
-          {this.state.song[0] type }
-          {/* key={song.type} */}
-          <h1>hola</h1>
-        </p>
-      </div>
-    );
 
-  }
+
+function App() {
+  return (
+    <div className="app">
+      <Header />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/*" component={ErrorPage} />
+          
+        </Switch>
+      </BrowserRouter>
+      
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
-
-//Datos que podemos obtener de el API
-//  {
-//         "id": 259,
-//         "type": "Song",
-//         "title": "Redemption Song",
-//         "artist": {
-//             "id": 58,
-//             "type": "Artist",
-//             "nameWithoutThePrefix": "Bob Marley",
-//             "useThePrefix": false,
-//             "name": "Bob Marley"
-//         },
-//         "chordsPresent": true,
-//         "tabTypes": [
-//             "PLAYER",
-//             "TEXT_GUITAR_TAB",
-//             "CHORDS",
-//             "TEXT_BASS_TAB"
-//         ]
-//     },

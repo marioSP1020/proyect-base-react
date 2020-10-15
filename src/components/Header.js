@@ -1,12 +1,14 @@
-
-
 import React from 'react';
 
-const Header = ({ type }) => {
+const Header = () => {
   return (
-    <h1>holaaaaaaaaa</h1>
+    <header>
+      <h1> Esto es el Header</h1>;
+    </header>
+      
   )
-}
-
+  
+  
+};
 
 export default Header;
