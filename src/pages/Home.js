@@ -48,8 +48,7 @@ const Home = () => {
           value={searchString}
           onChange={handleChange} />
         <button>submit</button>
-          </form>
-          
+          </form>          
 
       {songs.map((song) => {
         return (                    
