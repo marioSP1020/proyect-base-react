@@ -1,13 +1,20 @@
 import React from 'react';
 
-const Article = () => {
-  return (
-    <article className = "songer">
+const Article = (data) => {
+  
 
-    </article>
-     
     
-  )
+        return (
+          <article key={data.id}>
+            <h3> {data.title}</h3>
+          </article>
+        )
+      
+
+    
+    
+    
+  
 
 };
 

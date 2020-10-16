@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getSongs } from '../lib/api';
 import { useHistory } from 'react-router-dom';
+import Article from '../components/Article';
 
 const Home = () => {
   const [songs, setSongs] = useState([]);
@@ -21,7 +22,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetchAllsongs();
+    fetchAllsongs('the police');
   }, []);
 
   const handleSubmit = (event) => {
@@ -35,11 +36,9 @@ const Home = () => {
     console.log(searchItem);
   }
 
-
-
   return (
-    <main className="page-home">
-      <div></div>
+    <main >
+      
       <form onSubmit={handleSubmit}>
             <label className="cambio" for="search"> Search songs</label>
         <input className="recambio" type="search"
@@ -47,20 +46,43 @@ const Home = () => {
           placeholder="artist to search"
           value={searchString}
           onChange={handleChange} />
-        <button>submit</button>
-          </form>          
-
+         <button>submit</button>
+      </form> 
+      
+      <div className="page-home">
       {songs.map((song) => {
-        return (                    
-         <article key={song.id}>  
+                            
+         return(
+          <article key={song.id}>  
               <h3> {song.title}</h3>
           </article>
-          
-
-        );
+         )
       })}
+      </div>
+      
     </main>
   );
 };
 
 export default Home;
+
+
+/*
+<article key={song.id}>  
+              <h3> {song.title}</h3>
+          </article>
+
+
+{songs.map((song) => {
+                            
+         return(
+          <article key={song.id}>  
+              <h3> {song.title}</h3>
+          </article>
+         )
+      })}
+
+
+
+
+*/
