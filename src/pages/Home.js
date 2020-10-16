@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <main className="page-home">
-      <h2>Soy el Home</h2>
+      <div></div>
       <form onSubmit={handleSubmit}>
             <label className="cambio" for="search"> Search songs</label>
         <input className="recambio" type="search"
