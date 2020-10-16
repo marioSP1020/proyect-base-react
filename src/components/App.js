@@ -8,6 +8,7 @@ import Error from '../pages/Error.js';
 // UI components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Article from '../components/Article';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/*" component={Error} />
         </Switch>
+        <Article/>
         <Footer/>
       </BrowserRouter>
     </div>
