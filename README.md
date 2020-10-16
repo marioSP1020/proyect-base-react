@@ -1,4 +1,40 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Un par de párrafos sobre el enfoque general que tomaste:
+
+We look for the api with less authorizations required. At the same time,
+ we do a master code to apply the simplest way to do an MVP. We start testing
+ VEL api but it is unstable. To continue We test Reedit, Spotify and many more.
+No one of the main api can give us results. Only our original idea to do
+an MVP with the simplest api drive us to songsterr api (list of songs of each
+music band) left us to develop our final project by the original master code.
+
+
+-Installation instructions for any dependencies:
+
+To use proyect-base-react we start the installation cloning the project-base-react to our master branch. To continue we can install yarn by a terminal (like Hyper) writing: yarn (on the route of proyect-base-react). The last step It is writing again on the terminal 
+and the website renders: yarn start.
+
+
+- Link to your wireframes
+![pagina-inicio](/image/paginaInicio.jpg)
+![pagina-error](/image/paginaError.jpg)
+ 
+
+
+
+- Descripciones de problemas sin resolver o obstáculos importantes que tu equipo tuvo que superar:
+
+We found several handicaps at each test we do to at the differents 
+api we try to run. Even our master code it was very hard to write to 
+us because we don't know how to create a inner searcher or
+ how to use async functions properly.
+
+
+
+
+
+
+
 
 ## Available Scripts
 
