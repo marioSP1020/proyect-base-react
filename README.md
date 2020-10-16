@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-- Un par de párrafos sobre el enfoque general que tomaste:
+- General approach you took
 
 We look for the api with less authorizations required. At the same time,
  we do a master code to apply the simplest way to do an MVP. We start testing
@@ -22,7 +22,7 @@ and the website renders: yarn start.
 
 
 
-- Descripciones de problemas sin resolver o obstáculos importantes que tu equipo tuvo que superar:
+- Descriptions of unsolved problems or major obstacles your team had to overcome:   
 
 We found several handicaps at each test we do to at the differents 
 api we try to run. Even our master code it was very hard to write to 
